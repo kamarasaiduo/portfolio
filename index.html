@@ -21,13 +21,71 @@
             </ul>
         </nav>
         <div class="header-text">
-            <p>Web Developer</p>
+            <p class="author-profession">Web Developer</p>
             <H1>Hi, am <span>Saidu O.</span><br> from Sierra Leone</H1>
+        </div>     
+    </div>
+</div>
+<!--The About Section-->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="webimages/user.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore odit eius sequi, dicta officia placeat non recusandae minus iusto maiores, vitae laudantium necessitatibus praesentium ea porro, accusamus soluta et fuga.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                       <li><span>UI/UX</span> <br> Design Web/App Interfaces </li>
+                       <li><span>Web Development</span> <br> Design Web/App Interfaces </li>
+                      <li><span>App Development</span> <br> Design Web/App Interfaces </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                       <li><span>Hardware</span> <br> Design Web/App Interfaces </li>
+                       <li><span>Web Development</span> <br> Design Web/App Interfaces </li>
+                      <li><span>App Development</span> <br> Design Web/App Interfaces </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                       <li><span>Software</span> <br> Design Web/App Interfaces </li>
+                       <li><span>Web Development</span> <br> Design Web/App Interfaces </li>
+                      <li><span>App Development</span> <br> Design Web/App Interfaces </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        
     </div>
 </div>
 
+
+<script>
+  
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(let tablink of tablinks){
+            tablink.classList.remove("active-link"); 
+        }
+        for(let tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab"); 
+        }
+
+        document.getElementById(tabname).classList.add("active-tab"); 
+        event.target.classList.add("active-link"); 
+   
+    }
+</script>
 
 </body>
 </html>
